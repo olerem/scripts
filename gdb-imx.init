@@ -1,0 +1,16 @@
+file ~/tmp/local/vmlinux
+
+target extended-remote localhost:3333
+
+# toggle0 : force display of coreid 0
+define toggle0
+maint packet Jc0
+continue
+main packet Jc-1
+end
+# toggle1 : force display of coreid 1
+define toggle1
+maint packet Jc1
+continue
+main packet Jc-1
+end
