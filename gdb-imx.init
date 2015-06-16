@@ -1,3 +1,0 @@
-file ~/tmp/local/vmlinux
-
-target extended-remote localhost:3333
