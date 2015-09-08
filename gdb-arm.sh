@@ -10,6 +10,6 @@ else
 	GDB="gdb"
 fi
 
-"$GDB" -nx -ex "source "$CFG_PATH"/gdb-openocd-base.ini" \
+"$GDB" -nx -iex "set auto-load safe-path /" -ex "source "$CFG_PATH"/gdb-openocd-base.ini" \
 	-ex "source "$CFG_PATH"/gdb-openocd-smp.ini" \
 	"$ELF_PATH"
